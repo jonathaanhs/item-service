@@ -3,6 +3,7 @@ package service
 import (
 	"fmt"
 	"net/http"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -50,6 +51,9 @@ func (t *ItemSvcImpl) getAllItems() []Item {
 			Name: v.Name,
 		})
 	}
+	sort.Slice(items, func(i, j int) bool {
+		return items[i].ID < items[j].ID
+	})
 	return items
 }
 
@@ -71,6 +75,10 @@ func (t *ItemSvcImpl) getItemsByID(ids string) ([]Item, error) {
 	if len(items) == 0 {
 		return nil, httpkit.NewError(http.StatusNotFound, fmt.Sprintf("resource with ID %s not exist", ids))
 	}
+
+	sort.Slice(items, func(i, j int) bool {
+		return items[i].ID < items[j].ID
+	})
 
 	return items, nil
 }
