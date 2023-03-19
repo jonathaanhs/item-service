@@ -24,5 +24,5 @@ func HTTPError(w http.ResponseWriter, err error) {
 		json.NewEncoder(w).Encode(ErrorResp{StatusCode: httpErr.StatusCode, Message: httpErr.Message})
 	}
 
-	json.NewEncoder(w).Encode(ErrorResp{StatusCode: http.StatusInternalServerError, Message: httpErr.Message})
+	json.NewEncoder(w).Encode(ErrorResp{StatusCode: http.StatusInternalServerError, Message: err.Error()})
 }
