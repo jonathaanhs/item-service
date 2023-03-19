@@ -23,7 +23,7 @@ func HTTPError(w http.ResponseWriter, err error) {
 	httpErr, ok := err.(ErrorResp)
 	if ok {
 		json.NewEncoder(w).Encode(ErrorResp{StatusCode: httpErr.StatusCode, Message: httpErr.Message})
-	} else {
-		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 	}
+
+	json.NewEncoder(w).Encode(ErrorResp{StatusCode: http.StatusInternalServerError, Message: httpErr.Message})
 }
