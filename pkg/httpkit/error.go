@@ -20,8 +20,7 @@ func NewError(code int, message string) error {
 }
 
 func HTTPError(w http.ResponseWriter, err error) {
-	httpErr, ok := err.(ErrorResp)
-	if ok {
+	if httpErr, ok := err.(ErrorResp); ok {
 		json.NewEncoder(w).Encode(ErrorResp{StatusCode: httpErr.StatusCode, Message: httpErr.Message})
 	}
 
