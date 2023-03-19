@@ -1,6 +1,7 @@
 package httpkit
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 )
@@ -21,7 +22,7 @@ func NewError(code int, message string) error {
 func HTTPError(w http.ResponseWriter, err error) {
 	httpErr, ok := err.(ErrorResp)
 	if ok {
-		http.Error(w, httpErr.Message, httpErr.StatusCode)
+		json.NewEncoder(w).Encode(ErrorResp{StatusCode: httpErr.StatusCode, Message: httpErr.Message})
 	} else {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 	}
