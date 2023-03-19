@@ -45,3 +45,16 @@ Case 5: Request with ID not found
 curl --location --request GET 'localhost:8089/?id=4'
 {"StatusCode":404,"Message":"resource with ID 4 not exist"}
 ```
+
+## Unit Test Coverage
+
+```console
+foo@bar:~$ make unit-test
+go clean -testcache
+go test ./... --cover
+?       github.com/tokenomy-assessment/cmd      [no test files]
+?       github.com/tokenomy-assessment/internal [no test files]
+ok      github.com/tokenomy-assessment/internal/controller      0.192s  coverage: 100.0% of statements
+ok      github.com/tokenomy-assessment/internal/service 0.097s  coverage: 100.0% of statements
+ok      github.com/tokenomy-assessment/pkg/httpkit      0.140s  coverage: 100.0% of statements
+```
