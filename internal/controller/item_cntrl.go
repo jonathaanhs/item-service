@@ -36,5 +36,6 @@ func (ih *ItemCntrlImpl) Get(w http.ResponseWriter, r *http.Request) {
 	}
 
 	jsonResponse := Response{Code: http.StatusOK, Data: data}
+	w.WriteHeader(jsonResponse.Code)
 	json.NewEncoder(w).Encode(jsonResponse)
 }
