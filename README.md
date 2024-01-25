@@ -1,4 +1,4 @@
-# Tokenomy - Backend Developer Assessment
+# Item Service
 
 ## Requirements
 - Go 1.19
