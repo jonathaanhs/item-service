@@ -15,7 +15,7 @@ func main() {
 	m := http.NewServeMux()
 	controller.NewItemHandler(m, itemSvc)
 
-	if err := internal.StartApp(m, ":8089"); err != nil {
+	if err := internal.StartApp(m, ":8080"); err != nil {
 		log.Fatal(err)
 	}
 }
