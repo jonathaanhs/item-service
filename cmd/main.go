@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/tokenomy-assessment/internal"
-	"github.com/tokenomy-assessment/internal/controller"
-	"github.com/tokenomy-assessment/internal/service"
+	"github.com/item-service/internal"
+	"github.com/item-service/internal/controller"
+	"github.com/item-service/internal/service"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/tokenomy-assessment/pkg/httpkit"
+	"github.com/item-service/pkg/httpkit"
 )
 
 func TestNewValidErr(t *testing.T) {

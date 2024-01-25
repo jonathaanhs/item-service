@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/tokenomy-assessment/internal/service"
-	"github.com/tokenomy-assessment/pkg/httpkit"
+	"github.com/item-service/internal/service"
+	"github.com/item-service/pkg/httpkit"
 )
 
 func TestItemSvc_GetItems(t *testing.T) {

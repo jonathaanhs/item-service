@@ -7,7 +7,7 @@
 ```bash
 make unit-test # to run unit test
 make run # run the app, running on localhost:8089
-make build  # build the app, bin/tokenomy-assessment
+make build  # build the app, bin/item-service
 ```
 
 ## Call API
@@ -52,9 +52,9 @@ curl --location --request GET 'localhost:8089/?id=4'
 foo@bar:~$ make unit-test
 go clean -testcache
 go test ./... --cover
-?       github.com/tokenomy-assessment/cmd      [no test files]
-?       github.com/tokenomy-assessment/internal [no test files]
-ok      github.com/tokenomy-assessment/internal/controller      0.192s  coverage: 100.0% of statements
-ok      github.com/tokenomy-assessment/internal/service 0.097s  coverage: 100.0% of statements
-ok      github.com/tokenomy-assessment/pkg/httpkit      0.140s  coverage: 100.0% of statements
+?       github.com/item-service/cmd      [no test files]
+?       github.com/item-service/internal [no test files]
+ok      github.com/item-service/internal/controller      0.192s  coverage: 100.0% of statements
+ok      github.com/item-service/internal/service 0.097s  coverage: 100.0% of statements
+ok      github.com/item-service/pkg/httpkit      0.140s  coverage: 100.0% of statements
 ```

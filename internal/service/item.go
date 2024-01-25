@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tokenomy-assessment/pkg/httpkit"
+	"github.com/item-service/pkg/httpkit"
 )
 
 type (

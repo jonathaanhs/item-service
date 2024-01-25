@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/tokenomy-assessment/internal/service"
-	"github.com/tokenomy-assessment/pkg/httpkit"
+	"github.com/item-service/internal/service"
+	"github.com/item-service/pkg/httpkit"
 )
 
 type (

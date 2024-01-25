@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tokenomy-assessment/internal/controller"
-	"github.com/tokenomy-assessment/internal/service"
-	"github.com/tokenomy-assessment/pkg/httpkit"
+	"github.com/item-service/internal/controller"
+	"github.com/item-service/internal/service"
+	"github.com/item-service/pkg/httpkit"
 )
 
 type mockItemSvc struct{}
